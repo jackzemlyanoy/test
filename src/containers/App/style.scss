@@ -1,0 +1,18 @@
+.App {
+  &-content {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+  }
+
+  &-clientsList {
+    flex-grow: 1;
+    padding-right: 2rem;
+  }
+
+  &-clientsProfile {
+    padding-left: 1rem;
+    min-width: 50vw;
+    border: 1px solid #000;
+  }
+}

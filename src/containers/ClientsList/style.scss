@@ -1,0 +1,31 @@
+.ClientsList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+
+  &-item {
+    border: 1px solid black;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+
+    &.isActive {
+      background-color: #ffde1d;
+      color: white;
+    }
+    &-info{
+      strong{
+        display: flex;
+      }
+    }
+    &-container{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      & img{
+        border-radius: 50%;
+        margin-right: 2rem;
+      }
+    }
+  }
+}
