@@ -3,8 +3,11 @@ import { CLIENTS_FETCH_LIST, fetchClientsListSuccess, fetchClientsListError } fr
 export default store => next => action => {
     next(action);
 
+
+    // http://www.json-generator.com/api/json/get/cvPPQvtyiG?indent=2
+
     if (action.type === CLIENTS_FETCH_LIST) {
-        fetch('http://www.json-generator.com/api/json/get/cvPPQvtyiG?indent=2')
+        fetch('http://www.json-generator.com/api/json/get/cqttKiQMXS?indent=2')
             .then(result => result.json())
             .then(clientsList => {
                 next(fetchClientsListSuccess(clientsList));

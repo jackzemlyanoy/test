@@ -19,7 +19,7 @@ export const getCurrentViewableClient = createSelector(
     getCurrentViewableClientID,
     state => state.clients.get('list'),
 (clientId, clientsList) => {
-        const foundClient = clientsList.findLast(client => client.get('id') === clientId);
+        const foundClient = clientsList.find(client => client.get('id') === clientId);
         return foundClient && foundClient.toJS();
     },
 );
