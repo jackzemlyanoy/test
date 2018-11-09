@@ -7,7 +7,7 @@ export default store => next => action => {
     // http://www.json-generator.com/api/json/get/cvPPQvtyiG?indent=2
 
     if (action.type === CLIENTS_FETCH_LIST) {
-        fetch('http://www.json-generator.com/api/json/get/cqttKiQMXS?indent=2')
+        fetch('https://api.myjson.com/bins/enufa')
             .then(result => result.json())
             .then(clientsList => {
                 next(fetchClientsListSuccess(clientsList));

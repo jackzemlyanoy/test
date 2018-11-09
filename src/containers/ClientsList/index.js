@@ -34,26 +34,25 @@ class ClientsList extends Component {
         const { setViewableClientById } = this.props;
 
         setViewableClientById(target.dataset.clientId);
-        console.log(target.dataset.clientId);
-
     };
+
 
     render() {
         const { clientsList, currentViewableClientID } = this.props;
-        console.log('Render Clients List');
 
         return (
             <ul className="ClientsList">
-                {clientsList.map(({ id, general, job }) => {
+                {clientsList.map(({ general, job }, i) => {
+
                     const listItemClassName = classNames('ClientsList-item', {
-                        isActive: id === currentViewableClientID,
+                        isActive: i.toString() === currentViewableClientID,
                     });
 
                     return (
                         <li
                             className={listItemClassName}
-                            key={id}
-                            data-client-id={id}
+                            key={i}
+                            data-client-id={i}
                             onClick={this.handleShowClick}
                         >
                             <div className="ClientsList-item-container">
@@ -64,7 +63,7 @@ class ClientsList extends Component {
                                 </div>
                             </div>
 
-                            <button type="button" data-client-id={id} onClick={this.handleEditClick}>
+                            <button type="button" data-client-id={i} onClick={this.handleEditClick}>
                                 Edit
                             </button>
                         </li>

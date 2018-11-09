@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 
 const clientShape = PropTypes.shape({
-    id: PropTypes.number,
     general: PropTypes.shape({
         firstName: PropTypes.string.isRequired,
         lastName: PropTypes.string.isRequired,
@@ -18,7 +17,7 @@ const clientShape = PropTypes.shape({
     address: PropTypes.shape({
         street: PropTypes.string.isRequired,
         city: PropTypes.string.isRequired,
-        zipCode: PropTypes.string.isRequired,
+        zipCode:  PropTypes.string.isRequired,
         country: PropTypes.string.isRequired,
     }),
 });

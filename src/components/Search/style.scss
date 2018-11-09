@@ -1,0 +1,21 @@
+.Search{
+  display: flex;
+  padding-bottom: 5px;
+
+  &-input{
+    outline: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: 1px solid gainsboro;
+    padding-left: 2px;
+  }
+  &-submit{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: #48ba1e;
+    background-color: #c4cdc7;
+    border: 1px solid gainsboro;
+    cursor: pointer;
+    outline: none;
+  }
+}

@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import './style.scss';
+
 
 const Search = ({ searchQuery, onSearchSubmit, onSearchChange }) => (
     <form action="/" className="Search" onSubmit={onSearchSubmit}>
-        <input type="search" className="Search-input" onChange={onSearchChange} value={searchQuery} />
+        <input type="search" placeholder="Search..." className="Search-input" onChange={onSearchChange} value={searchQuery} />
         <button type="submit" className="Search-submit">
             Search
         </button>

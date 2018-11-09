@@ -1,18 +1,21 @@
 .App {
   &-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding-top: 1rem;
   }
 
   &-clientsList {
     flex-grow: 1;
-    padding-right: 2rem;
+    padding-right: 1rem;
   }
 
   &-clientsProfile {
     padding-left: 1rem;
-    min-width: 50vw;
-    border: 1px solid #000;
+    margin-right: 1rem;
+    min-width: 55vw;
+    height: 94vh;
+    background-color: gainsboro;
+    border-radius: 5px;
   }
 }

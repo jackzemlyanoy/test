@@ -14,7 +14,7 @@ const enhance = compose(
     branch(({ client }) => typeof client === 'undefined', renderNothing),
 );
 
-const ClientProfile = ({ client: { id, general, job  } }) => (
+const ClientProfile = ({ client: {  general, job  }}) => (
     <div className="ClientProfile">
         <img src={general.avatar} alt="" />
         <div className="ClientProfile-name">

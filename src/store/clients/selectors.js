@@ -19,7 +19,7 @@ export const getCurrentViewableClient = createSelector(
     getCurrentViewableClientID,
     state => state.clients.get('list'),
 (clientId, clientsList) => {
-        const foundClient = clientsList.find(client => client.get('id') === clientId);
+        const foundClient = clientsList.findLast((client, i) => i.toString() === clientId);
         return foundClient && foundClient.toJS();
     },
 );
@@ -36,9 +36,9 @@ export const getFilteredClientsList = createSelector(
         clientsList
             .filter(client =>
                 client
-                    .valueSeq()
-                    .join('')
-                    .includes(searchQuery),
+                    .toString()
+                    .toLowerCase()
+                    .includes(searchQuery)
             )
             .toJS(),
 );

@@ -15,7 +15,6 @@ import {
 const initialState = fromJS({
     list: [],
     editableClient: {
-        id: null,
         general: {
             firstName: '',
             lastName: '',
